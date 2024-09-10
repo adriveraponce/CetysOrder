@@ -1,8 +1,8 @@
 -- Drop order_line_items first due to foreign key constraint
---DROP TABLE IF EXISTS order_line_items;
+DROP TABLE IF EXISTS order_line_items;
 
 -- Drop orders table after
---DROP TABLE IF EXISTS orders;
+DROP TABLE IF EXISTS orders;
 
 -- Create table for orders
 create table if not exists orders
