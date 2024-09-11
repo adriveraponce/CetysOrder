@@ -23,7 +23,7 @@ public class Orders {
 
 @RestController
 @ResponseBody
-@Transactional
+//@Transactional
 @RequestMapping("/orders")
 class OrdersController{
     private final Logger logger = LoggerFactory.getLogger(OrdersController.class);
@@ -52,7 +52,6 @@ class OrdersController{
                             publisher.publishEvent(new InventoryUpdatedEvent(li.product(),
                                     li.quantity()));
                         });
-        logger.info("test que puedo hacer teest");
         return saved;
     }
 }
