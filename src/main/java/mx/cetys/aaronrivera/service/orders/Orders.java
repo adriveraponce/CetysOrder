@@ -52,6 +52,7 @@ class OrdersController{
                             publisher.publishEvent(new InventoryUpdatedEvent(li.product(),
                                     li.quantity()));
                         });
+        logger.info("test que puedo hacer teest");
         return saved;
     }
 }
