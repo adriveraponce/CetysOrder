@@ -23,7 +23,7 @@ public class Orders {
 
 @RestController
 @ResponseBody
-//@Transactional
+@Transactional
 @RequestMapping("/orders")
 class OrdersController{
     private final Logger logger = LoggerFactory.getLogger(OrdersController.class);

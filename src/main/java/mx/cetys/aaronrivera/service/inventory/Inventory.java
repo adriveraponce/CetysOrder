@@ -13,12 +13,12 @@ import org.springframework.transaction.annotation.Transactional;
 public class Inventory {
     private final Logger logger = LoggerFactory.getLogger(Inventory.class);
 
-    //@ApplicationModuleListener
-    @EventListener
+    @ApplicationModuleListener
+    //@EventListener
     //@Async
     void on(InventoryUpdatedEvent inventoryUpdatedEvent) throws InterruptedException {
         logger.info("catching the event...");
-        Thread.sleep(10_000);
+        Thread.sleep(20_000);
         logger.info("The inventory hast been updated");
     }
 }
