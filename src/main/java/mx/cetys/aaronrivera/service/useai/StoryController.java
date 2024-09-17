@@ -59,7 +59,8 @@ class Example {
 
             for (var i = 0; i < 1000; i++) {
                 var first = i == 0;
-                var t = Thread.ofPlatform().unstarted(
+                var t = Thread.ofPlatform()
+                        .unstarted(
                         () -> {
                             if (first) names.add(Thread.currentThread().toString());
                             try {
