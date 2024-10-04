@@ -7,3 +7,7 @@ services:
       - 'POSTGRES_USER=myuser'
     ports:
       - '8181:5432'
+  go-httpbin:
+    ports:
+      - '9000:8080'
+    image: 'mccutchen/go-httpbin:latest'
